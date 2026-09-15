@@ -19,14 +19,14 @@ export const BUILTIN_TEMPLATES={
  bold:{label:'Bold Modern',category:'Modern',background:{type:'solid',color:'#f8fafc'},elements:[shape({x:50,y:23,w:100,h:30,fill:'#111827',borderWidth:0,borderRadius:0}),text('HELLO, I’M',{x:26,y:23,w:36,fontSize:24,fill:'#ffffff'}),field({y:57,fill:'#111827',fontSize:54}),shape({x:50,y:84,w:100,h:12,fill:'#06b6d4',borderWidth:0,borderRadius:0})]},
  schoolcolors:{label:'School Colors',category:'Simple',background:{type:'solid',color:'#ffffff'},elements:[shape({x:50,y:14,w:100,h:20,fill:'#1d4ed8',borderWidth:0,borderRadius:0}),shape({x:50,y:86,w:100,h:20,fill:'#fbbf24',borderWidth:0,borderRadius:0}),field({y:50,fill:'#1e3a8a'}),text('★ STUDENT ★',{y:18,w:38,fontSize:17,fill:'#ffffff'})]},
  seasonal:{label:'Seasonal Celebration',category:'Seasonal',background:{type:'pattern',pattern:'confetti',color:'#fffdf7',color2:'#ec4899'},elements:[shape({w:78,h:58,fill:'#ffffff',borderColor:'#7c3aed',borderWidth:3,borderRadius:20}),text('CELEBRATE!',{y:27,w:46,fontSize:22,fill:'#f97316'}),field({y:53,fill:'#7c3aed',fontSize:42}),text('★ ✦ ★',{y:74,w:30,fontSize:25,fill:'#eab308'})]},
- speech:{label:'Speech Bubble Kids',category:'Elementary',background:{type:'solid',color:'#ffffff'},elements:[text('💬',{x:18,y:28,w:24,h:25,fontSize:56,fill:'#06b6d4'}),text('💭',{x:82,y:30,w:24,h:25,fontSize:54,fill:'#ec4899'}),field({y:55,fill:'#111827'}),text('We belong here!',{y:80,w:42,fontSize:19,fill:'#16a34a',fontFamily:'Comic Sans MS'})]}
+ speech:{label:'Speech Bubble Kids',category:'Elementary',background:{type:'solid',color:'#ffffff'},elements:[{type:'decoration',decorationKind:'speech',text:'Hello!',x:20,y:28,w:30,h:24,fill:'#67e8f9',stroke:'#111827',borderColor:'#0891b2',borderWidth:2,fontFamily:'Comic Sans MS',fontSize:18,fontWeight:800},{type:'decoration',decorationKind:'speech',text:'Welcome!',x:80,y:30,w:30,h:24,fill:'#f9a8d4',stroke:'#111827',borderColor:'#db2777',borderWidth:2,fontFamily:'Comic Sans MS',fontSize:18,fontWeight:800},field({y:57,fill:'#111827'}),text('We belong here!',{y:82,w:42,fontSize:19,fill:'#16a34a',fontFamily:'Comic Sans MS'})]}
 };
 
 export const DECORATIONS={
- banner:{label:'Banner',elements:[shape({w:55,h:18,fill:'#111827',borderWidth:0,borderRadius:4})]},
- label:{label:'Rounded Label',elements:[shape({w:42,h:20,fill:'#ffffff',borderColor:'#111827',borderWidth:3,borderRadius:22})]},
- stars:{label:'Star Row',elements:[text('★  ★  ★',{w:38,h:16,fontSize:30,fill:'#f59e0b'})]},
- splash:{label:'Color Splash',elements:[text('✹',{w:25,h:28,fontSize:64,fill:'#ec4899'})]},
- speech:{label:'Speech Bubble',elements:[text('💬',{w:28,h:28,fontSize:64,fill:'#06b6d4'})]},
- frame:{label:'Card Frame',elements:[shape({w:88,h:78,fill:'#ffffff',borderColor:'#111827',borderWidth:4,borderRadius:16,opacity:.18})]}
+ banner:{label:'Banner',elements:[{type:'decoration',decorationKind:'banner',text:'Banner',w:55,h:18,fill:'#111827',stroke:'#ffffff',borderColor:'#111827',borderWidth:0,fontFamily:'Arial',fontWeight:800}]},
+ label:{label:'Rounded Label',elements:[{type:'decoration',decorationKind:'label',text:'Label',w:42,h:20,fill:'#ffffff',stroke:'#111827',borderColor:'#111827',borderWidth:3,fontFamily:'Arial',fontWeight:800}]},
+ stars:{label:'Star Row',elements:[{type:'decoration',decorationKind:'stars',text:'',w:38,h:16,fill:'#f59e0b',borderWidth:0}]},
+ splash:{label:'Color Splash',elements:[{type:'decoration',decorationKind:'splash',text:'',w:25,h:28,fill:'#ec4899',borderWidth:0}]},
+ speech:{label:'Speech Bubble',elements:[{type:'decoration',decorationKind:'speech',text:'Type here',w:36,h:28,fill:'#06b6d4',stroke:'#111827',borderColor:'#0e7490',borderWidth:2,fontFamily:'Arial',fontWeight:800}]},
+ frame:{label:'Card Frame',elements:[{type:'decoration',decorationKind:'frame',text:'',w:88,h:78,fill:'#111827',borderWidth:4}]}
 };
