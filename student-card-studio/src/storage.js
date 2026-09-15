@@ -1,0 +1,6 @@
+const DB='student-card-designer',STORE='recovery',KEY='snapshots';
+export function nextSnapshots(existing,snapshot,limit=3){return [snapshot,...(existing||[])].slice(0,limit);}
+function openDb(){return new Promise((res,rej)=>{const r=indexedDB.open(DB,1);r.onupgradeneeded=()=>r.result.createObjectStore(STORE);r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});}
+export async function saveRecovery(project){const db=await openDb(),tx=db.transaction(STORE,'readwrite'),s=tx.objectStore(STORE); const old=await new Promise(r=>{const q=s.get(KEY);q.onsuccess=()=>r(q.result||[]);q.onerror=()=>r([])}); s.put(nextSnapshots(old,{savedAt:Date.now(),project:structuredClone(project)}),KEY); return new Promise((r,j)=>{tx.oncomplete=r;tx.onerror=()=>j(tx.error)});}
+export async function loadRecovery(validate=x=>x){const db=await openDb(),tx=db.transaction(STORE,'readonly'); const arr=await new Promise(r=>{const q=tx.objectStore(STORE).get(KEY);q.onsuccess=()=>r(q.result||[]);q.onerror=()=>r([])}); for(const x of arr){try{return validate(x.project)}catch{}} return null;}
+export async function clearRecovery(){const db=await openDb();const tx=db.transaction(STORE,'readwrite');tx.objectStore(STORE).delete(KEY);}

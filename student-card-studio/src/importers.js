@@ -1,0 +1,6 @@
+const sid=()=>`student-${crypto?.randomUUID?.()||Math.random().toString(36).slice(2)}`;
+export function parseNameList(text){return text.split(/\r?\n/).map(x=>x.trim()).filter(Boolean).map(Name=>({id:sid(),fields:{Name},photo:null,qr:null}));}
+function parseRow(line){let out=[],cur='',q=false; for(let i=0;i<line.length;i++){const c=line[i]; if(c==='"'){if(q&&line[i+1]==='"'){cur+='"';i++;}else q=!q;}else if(c===','&&!q){out.push(cur);cur='';}else cur+=c;} out.push(cur); return out.map(x=>x.trim());}
+export function parseCsvRoster(text){const lines=text.replace(/^\uFEFF/,'').split(/\r?\n/).filter(x=>x.trim()); if(!lines.length)return {fields:[],students:[]}; const fields=parseRow(lines[0]); const students=lines.slice(1).map(line=>{const vals=parseRow(line),obj={}; fields.forEach((f,i)=>obj[f]=vals[i]??''); return {id:sid(),fields:obj,photo:null,qr:null};}); return {fields,students};}
+export function normalizePersonName(filename){return filename.replace(/\.(png|jpe?g|webp)$/i,'').replace(/[,._-]+/g,' ').replace(/\s+/g,' ').trim().toLowerCase();}
+export function matchPhotoFilename(filename,students){const n=normalizePersonName(filename); return students.find(s=>normalizePersonName(s.fields.Name||'')===n)||null;}
