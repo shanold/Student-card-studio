@@ -1,0 +1,7 @@
+services:
+  student-card-studio:
+    build: .
+    container_name: student-card-studio
+    restart: unless-stopped
+    ports:
+      - "8090:80"
