@@ -4,4 +4,4 @@ services:
     container_name: student-card-studio
     restart: unless-stopped
     ports:
-      - "8090:80"
+      - "8093:80"

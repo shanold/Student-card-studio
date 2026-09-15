@@ -7,4 +7,3 @@ export const CARD_PRESETS={
  pencil:{label:'Pencil Box Label',widthIn:4,heightIn:1.5}, index:{label:'Index Card',widthIn:5,heightIn:3},
  badge:{label:'Name Badge',widthIn:3.5,heightIn:2.25}, info:{label:'Student Info Card',widthIn:5,heightIn:3.5}
 };
-export const BUILTIN_TEMPLATES={blank:{label:'Blank'},stars:{label:'Stars & Bubbles'},notebook:{label:'Notebook'},modern:{label:'Simple Modern'}};
