@@ -1,4 +1,4 @@
-# Student Card Studio v0.1.2
+# Student Card Studio v0.1.3
 
 A standalone, privacy-friendly spinoff of Clever Badge Maker for creating attractive student desk cards, binder cards, pencil-box labels, nameplates, and info cards.
 

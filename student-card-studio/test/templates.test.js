@@ -19,3 +19,8 @@ test('pattern none renders the base color and patterns have sizing',()=>{
   assert.match(backgroundCss({...base,pattern:'dots'}),/radial-gradient/);
   assert.notEqual(backgroundSizeCss({...base,pattern:'dots'}),'cover');
 });
+test('speech bubble starter template uses real editable speech decorations',()=>{
+  const speech = BUILTIN_TEMPLATES.speech.elements.filter(e=>e.type==='decoration'&&e.decorationKind==='speech');
+  assert.ok(speech.length>=2);
+  assert.ok(speech.every(e=>typeof e.text==='string'&&e.text.length>0));
+});

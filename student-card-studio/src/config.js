@@ -1,3 +1,4 @@
+export const APP_VERSION='0.1.3';
 export const MAX_TEMPLATE_ELEMENTS=50;
 export const PROJECT_TYPE='student-info-card-project';
 export const TEMPLATE_TYPE='student-info-card-template';
