@@ -4,12 +4,13 @@ A standalone, privacy-friendly spinoff of Clever Badge Maker for creating attrac
 
 ## Highlights
 - Premade physical sizes plus custom inch dimensions.
-- Blank, modern, stars/bubbles, and notebook starting templates.
+- 16 starting templates across Simple, Modern, Learning, Colorful, Elementary, Classroom, and Seasonal styles.
+- Reusable decorations including banners, labels, stars, splashes, speech bubbles, and frames.
 - Paste names, arbitrary-column CSV rosters, Clever badge PDFs, and batch student photos.
 - Up to 50 configurable design elements: text, dynamic fields, images, student photos, Clever QR crops, shapes, and lines.
 - Drag/resize, rotation, opacity, layers, lock/hide/duplicate, center snapping, print-safe guide, undo/redo.
 - Fancy text controls under **More Features**: curve, outline/bubble styling, shadow/glow, and precise positioning.
-- Solid, gradient, pattern, or uploaded-image backgrounds.
+- Solid, gradient, uploaded-image, and working pattern backgrounds (None, notebook, graph, dots, checkerboard, confetti, and wood/craft).
 - IndexedDB recovery with the latest three snapshots and a clear recovered-job warning.
 - Durable Project JSON export/import and student-free Template export/import.
 - 300-DPI PNG, ZIP-of-PNGs, and printable PDF output. PDF pages place the same rendered card images rather than redrawing the design.
@@ -26,7 +27,7 @@ Then open the Vite URL shown in the terminal.
 ```bash
 docker compose up -d --build
 ```
-Default host port: **8090**.
+Default host port: **8093**.
 
 ## Production build
 ```bash
