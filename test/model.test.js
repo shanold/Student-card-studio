@@ -17,4 +17,4 @@ import {nextSnapshots} from '../src/storage.js'; import {crc32} from '../src/zip
 test('recovery keeps newest three',()=>assert.deepEqual(nextSnapshots([2,3,4],1),[1,2,3]));
 test('crc32 standard vector',()=>assert.equal(crc32(new TextEncoder().encode('123456789')),0xcbf43926));
 
-test('app exposes a visible semantic build version',()=>assert.match(APP_VERSION,/^0\.1\.3$/));
+test('app exposes a visible semantic build version',()=>assert.match(APP_VERSION,/^0\.1\.4$/));

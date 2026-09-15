@@ -39,3 +39,18 @@ export function backgroundCss(bg){
  return bg.image?`url(${bg.image})`:bg.color;
 }
 export function backgroundSizeCss(bg){if(bg.type!=='pattern')return 'cover';return ({graph:'24px 24px',dots:'22px 22px',checker:'32px 32px',confetti:'42px 42px'}[bg.pattern]||'cover');}
+
+export function textFillCss(el){
+ const gradient=el.fillType==='gradient';
+ return gradient?{color:'transparent',backgroundImage:`linear-gradient(${Number(el.gradientAngle??90)}deg,${el.fill||'#111827'},${el.fill2||el.fill||'#111827'})`,backgroundClip:'text',WebkitBackgroundClip:'text'}:{color:el.fill||'#111827',backgroundImage:'none',backgroundClip:'border-box',WebkitBackgroundClip:'border-box'};
+}
+export function textShadowCss(el){
+ const style=el.shadowStyle===undefined?(el.shadow?'drop':'none'):el.shadowStyle,c=el.shadowColor||'#000000';
+ if(style==='none')return 'none';
+ if(style==='glow')return `0 0 ${Math.max(1,Number(el.shadowBlur??8))}px ${c}`;
+ if(style==='extrude'){
+  const depth=Math.max(1,Math.round(Number(el.shadowDepth??4))),sx=Number(el.shadowX??1)||1,sy=Number(el.shadowY??1)||1;
+  return Array.from({length:depth},(_,i)=>`${Math.round(sx*(i+1)*100)/100}px ${Math.round(sy*(i+1)*100)/100}px ${Number(el.shadowBlur??0)}px ${c}`).join(', ');
+ }
+ return `${Number(el.shadowX??2)}px ${Number(el.shadowY??2)}px ${Number(el.shadowBlur??4)}px ${c}`;
+}

@@ -1,4 +1,4 @@
-# Student Card Studio v0.1.3
+# Student Card Studio v0.1.4
 
 A standalone, privacy-friendly spinoff of Clever Badge Maker for creating attractive student desk cards, binder cards, pencil-box labels, nameplates, and info cards.
 
@@ -45,3 +45,11 @@ Autosave is intentionally an emergency recovery mechanism, not a durable save. U
 
 ## Clever importer
 The Clever PDF importer adapts the badge-grid QR detection/cropping approach from Clever Badge Maker, but imported students become ordinary Student Card Studio records. The rest of the designer has no Clever-specific assumptions.
+
+
+## v0.1.4
+
+- Proportional corner scaling now scales the whole selected element, including text size, outlines, borders, shadows/glows, and decoration text.
+- Hold **Shift** while corner-dragging to stretch width/height freely.
+- Added editable WordArt presets: Rainbow Pop, Bubble Letters, Neon Glow, 3D Block, Big Arch, Wavy Fun, Candy Stripe, Comic Burst, and Metallic.
+- WordArt remains normal editable text and supports gradient fills, outlines, curve/warp, letter spacing, slant, drop shadows, glow, extrusion depth, and shadow direction/blur.
