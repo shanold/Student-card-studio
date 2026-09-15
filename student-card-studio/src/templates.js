@@ -23,10 +23,10 @@ export const BUILTIN_TEMPLATES={
 };
 
 export const DECORATIONS={
- banner:{label:'Banner',elements:[shape({w:55,h:18,fill:'#111827',borderWidth:0,borderRadius:4})]},
- label:{label:'Rounded Label',elements:[shape({w:42,h:20,fill:'#ffffff',borderColor:'#111827',borderWidth:3,borderRadius:22})]},
- stars:{label:'Star Row',elements:[text('★  ★  ★',{w:38,h:16,fontSize:30,fill:'#f59e0b'})]},
- splash:{label:'Color Splash',elements:[text('✹',{w:25,h:28,fontSize:64,fill:'#ec4899'})]},
- speech:{label:'Speech Bubble',elements:[text('💬',{w:28,h:28,fontSize:64,fill:'#06b6d4'})]},
- frame:{label:'Card Frame',elements:[shape({w:88,h:78,fill:'#ffffff',borderColor:'#111827',borderWidth:4,borderRadius:16,opacity:.18})]}
+ banner:{label:'Banner',elements:[{type:'decoration',decorationKind:'banner',text:'Banner',w:55,h:18,fill:'#111827',stroke:'#ffffff',borderColor:'#111827',borderWidth:0,fontFamily:'Arial',fontWeight:800}]},
+ label:{label:'Rounded Label',elements:[{type:'decoration',decorationKind:'label',text:'Label',w:42,h:20,fill:'#ffffff',stroke:'#111827',borderColor:'#111827',borderWidth:3,fontFamily:'Arial',fontWeight:800}]},
+ stars:{label:'Star Row',elements:[{type:'decoration',decorationKind:'stars',text:'',w:38,h:16,fill:'#f59e0b',borderWidth:0}]},
+ splash:{label:'Color Splash',elements:[{type:'decoration',decorationKind:'splash',text:'',w:25,h:28,fill:'#ec4899',borderWidth:0}]},
+ speech:{label:'Speech Bubble',elements:[{type:'decoration',decorationKind:'speech',text:'Type here',w:36,h:28,fill:'#06b6d4',stroke:'#111827',borderColor:'#0e7490',borderWidth:2,fontFamily:'Arial',fontWeight:800}]},
+ frame:{label:'Card Frame',elements:[{type:'decoration',decorationKind:'frame',text:'',w:88,h:78,fill:'#111827',borderWidth:4}]}
 };

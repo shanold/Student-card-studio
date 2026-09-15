@@ -1,11 +1,11 @@
-# Student Card Studio v0.1.0
+# Student Card Studio v0.1.2
 
 A standalone, privacy-friendly spinoff of Clever Badge Maker for creating attractive student desk cards, binder cards, pencil-box labels, nameplates, and info cards.
 
 ## Highlights
 - Premade physical sizes plus custom inch dimensions.
 - 16 starting templates across Simple, Modern, Learning, Colorful, Elementary, Classroom, and Seasonal styles.
-- Reusable decorations including banners, labels, stars, splashes, speech bubbles, and frames.
+- Reusable scalable decorations including banners, text labels, stars, splashes, speech bubbles with in-bubble text, and frames.
 - Paste names, arbitrary-column CSV rosters, Clever badge PDFs, and batch student photos.
 - Up to 50 configurable design elements: text, dynamic fields, images, student photos, Clever QR crops, shapes, and lines.
 - Drag/resize, rotation, opacity, layers, lock/hide/duplicate, center snapping, print-safe guide, undo/redo.
